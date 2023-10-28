@@ -116,14 +116,14 @@ public class GlobeViewController: GenericController {
         view.addSubview(sceneView)
 
         sceneView.scene = scene
-        sceneView.allowsCameraControl = false
+        sceneView.allowsCameraControl = true
     }
     
     private func setupCamera() {
         self.cameraNode = SCNNode()
         
         cameraNode.camera = SCNCamera()
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 6)
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 20)
         cameraNode.camera?.fieldOfView = 25
 
 //        let constraint = SCNLookAtConstraint(target: sceneView.scene?.rootNode)
