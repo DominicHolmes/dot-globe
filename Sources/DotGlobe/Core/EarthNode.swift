@@ -20,7 +20,6 @@ public class EarthNode: SCNNode {
         self.geometry?.firstMaterial?.reflective.contents = GenericColor(earthReflection)
         self.geometry?.firstMaterial?.reflective.intensity = 1.0
         self.filters = addBloom()
-        
         setupLight()
     }
 
@@ -43,8 +42,8 @@ public class EarthNode: SCNNode {
     
     func addBloom() -> [CIFilter]? {
         let bloomFilter = CIFilter(name:"CIBloom")!
-        bloomFilter.setValue(5.0, forKey: "inputIntensity")
-        bloomFilter.setValue(10.0, forKey: "inputRadius")
+        bloomFilter.setValue(0.5, forKey: "inputIntensity")
+        bloomFilter.setValue(5.0, forKey: "inputRadius")
         return [bloomFilter]
     }
 
